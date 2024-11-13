@@ -1,6 +1,6 @@
-import { markerdata } from "./MarkerData";
 import Asidebar from "./Asidebar";
 import {useState,useEffect} from 'react';
+
 
 const {kakao} = window;
 
@@ -12,7 +12,7 @@ export default function KakaoMap(){
     
     
     const username = localStorage.getItem("userData");
-    console.log(username)
+    
 
     
 
@@ -47,26 +47,22 @@ export default function KakaoMap(){
     };
     var map = new kakao.maps.Map(container, options);
   
-    markerdata.forEach((el) => {
-      new kakao.maps.Marker({
-        map: map,
-        position: new kakao.maps.LatLng(el.lat, el.lng),
-        title: el.title,
-      });
-    });
   
   
-  
-  markerdata.forEach((el) => {
-      const markerPosition = new kakao.maps.LatLng(el.lat,el.lng);
+      data.forEach((el) => {
+      const markerPosition = new kakao.maps.LatLng(el.LAT,el.LNG);
+
       const marker = new kakao.maps.Marker({
         position: markerPosition,
         map: map,
-        title: el.title,
+        title: el.TITLE,
       })
   
+
   var infowindow = new kakao.maps.InfoWindow({
-    content : `<div className="infodiv" style="padding:5px;">${el.title}</div>`,
+    content : `<div className="infodiv" style="padding:5px;">
+    ${el.TITLE}
+    </div>`,
     removable : true,
   })
   
@@ -80,6 +76,7 @@ export default function KakaoMap(){
   
     },[])
 
+   
 
     return(
         <>
@@ -95,8 +92,9 @@ export default function KakaoMap(){
       <button>Home</button>
      </div>
      </navbar>
-     <div id="map" style={{width:"100%", height:"600px"}}></div> 
+     <div id="map" style={{width:"100%", height:"900px"}}></div> 
      <Asidebar data={data} />
+     
         </>
     )
 }
