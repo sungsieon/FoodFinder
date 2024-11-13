@@ -29,7 +29,7 @@ function App() {
         <Route path="signUp" element={<SignUp setMoveBoolean={setMoveBoolean}/>} />
       </Routes>
     </UserProvider>
-     /*ㅁ ㅁㅁ  */
+     
     
     
     </>

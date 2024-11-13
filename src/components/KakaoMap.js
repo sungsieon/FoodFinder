@@ -14,8 +14,6 @@ export default function KakaoMap(){
     const username = localStorage.getItem("userData");
     
 
-    
-
     useEffect(() => {
       const userData = JSON.parse(localStorage.getItem("userData"));
       
