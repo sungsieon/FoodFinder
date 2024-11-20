@@ -6,7 +6,7 @@ import forkImage from '../Img/fork.png';
 import dishImage from '../Img/dish.png';
 
 export default function Login({setMoveBoolean}) {
-    const { userData, setUserData } = useUserContext() || {}; // 기본값으로 빈 객체를 설정하여 오류 방지
+    const { userData, setUserData } = useUserContext() || {}; 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name,setName] = useState(userData.name);

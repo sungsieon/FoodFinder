@@ -1,6 +1,5 @@
 import {useState,useEffect} from 'react';
 import './App.css';
-import { markerdata } from './components/MarkerData';
 import Asidebar from './components/Asidebar';
 import {Routes,Route} from 'react-router-dom';
 import Login from './components/login';
@@ -14,9 +13,9 @@ function App() {
 
 
   useEffect(() => {
-    // moveBoolean 상태가 변경될 때마다 실행되는 부분
+  
     console.log('moveBoolean changed:', moveBoolean);
-  }, [moveBoolean]); // useEffect가 moveBoolean 상태에 의존하도록 설정
+  }, [moveBoolean]);
 
 
 
