@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/FoodFinder/static/css/main.3a2d824b.css",
+    "main.js": "/FoodFinder/static/js/main.ac2c6dd1.js",
+    "static/js/453.e5b00392.chunk.js": "/FoodFinder/static/js/453.e5b00392.chunk.js",
+    "static/media/ChosunKg.TTF": "/FoodFinder/static/media/ChosunKg.5922e50828ed29451f92.TTF",
+    "static/media/Puradak Gentle Gothic.ttf": "/FoodFinder/static/media/Puradak Gentle Gothic.f46c6081dddf95730690.ttf",
+    "static/media/dish.png": "/FoodFinder/static/media/dish.2f9ef0990b09a7965509.png",
+    "index.html": "/FoodFinder/index.html",
+    "main.3a2d824b.css.map": "/FoodFinder/static/css/main.3a2d824b.css.map",
+    "main.ac2c6dd1.js.map": "/FoodFinder/static/js/main.ac2c6dd1.js.map",
+    "453.e5b00392.chunk.js.map": "/FoodFinder/static/js/453.e5b00392.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a2d824b.css",
+    "static/js/main.ac2c6dd1.js"
+  ]
+}
