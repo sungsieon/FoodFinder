@@ -9,7 +9,7 @@ export default function Login({setMoveBoolean}) {
     const { userData, setUserData } = useUserContext() || {}; 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [name,setName] = useState(userData.name || '');
+    const [name,setName] = useState(userData?.name || '');
     const [dishMove,setDishMove] = useState(false);
     const navigate = useNavigate();
 
