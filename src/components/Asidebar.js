@@ -10,6 +10,7 @@ export default function Asidebar({ data,mapData }) {
   const [confirmClose, setConfirmClose] = useState(false)
   const [selectDays, setSelectDays] = useState([])
   const [selectDates, setSelectDates] = useState([])
+  
 
   function reservationBtn(){
     if(selectedDate){
