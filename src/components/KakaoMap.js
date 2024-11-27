@@ -41,6 +41,10 @@ export default function KakaoMap(){
   },[])
   
     const initializeMap = () => {
+
+      const { kakao } = window;
+
+      if(kakao){
       var container = document.getElementById("map");
     var options = {
       center: new kakao.maps.LatLng(35.193363, 128.98607),
@@ -76,11 +80,12 @@ export default function KakaoMap(){
   });
   setMapData({map, markers});
     }
+  }
 
       useEffect(() => {
         initializeMap();
       },[data])
-
+    
     
 
     function todayBtn(){
