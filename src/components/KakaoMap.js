@@ -83,9 +83,13 @@ export default function KakaoMap(){
   }
 
       useEffect(() => {
-        if(data.length > 0){
-          initializeMap();
-        }
+         try{
+           initializeMap();
+         }
+         catch{
+          console.error("error : initializeMap")
+         }
+        
       },[data])
     
     
