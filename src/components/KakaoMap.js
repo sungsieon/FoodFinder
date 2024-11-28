@@ -82,11 +82,11 @@ export default function KakaoMap(){
     }
   }
 
-      useEffect(() => {
-           initializeMap();
-      },[data])
-    
-    
+  useEffect(() => {
+    if (window.kakao && data.length > 0) {
+      initializeMap();
+    }
+  }, [data]);
 
     function todayBtn(){
       setRandomBtn(true)
