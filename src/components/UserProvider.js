@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useContext } from 'react';
+import { createContext, useState, useEffect, useContext } from "react";
 
 export const UserContext = createContext();
 
@@ -8,14 +8,12 @@ export function useUserContext() {
 
 export default function UserProvider({ children }) {
   const [userData, setUserData] = useState(() => {
-   
-    const savedUserData = localStorage.getItem('userData');
+    const savedUserData = localStorage.getItem("userData");
     return savedUserData ? JSON.parse(savedUserData) : null;
   });
 
-  
   useEffect(() => {
-    localStorage.setItem('userData', JSON.stringify(userData));
+    localStorage.setItem("userData", JSON.stringify(userData));
   }, [userData]);
 
   return (
