@@ -29,6 +29,7 @@ export default function KakaoMap() {
 
       const items = data.getFoodKr.item;
       setData(items);
+      
     };
     getData();
   }, []);

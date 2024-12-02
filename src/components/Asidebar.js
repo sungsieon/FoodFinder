@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Asidebar({ data, mapData }) {
   const [changeColor, setChangeColor] = useState({});
@@ -10,25 +10,61 @@ export default function Asidebar({ data, mapData }) {
   const [confirmClose, setConfirmClose] = useState(false);
   const [selectDays, setSelectDays] = useState([]);
   const [selectDates, setSelectDates] = useState([]);
+  const [selectedTime, setSelectedTime] = useState(null);
+  const [orangeChange, setOrangeChange] = useState(false);
+  const [dateOrangeChange, setDateOrangeChange] = useState(false);
+  const [selectedStore, setSelectedStore] = useState(null);
 
-  function reservationBtn() {
-    if (selectedDate) {
-      if (selectDates.includes(selectedDate)) {
-        alert("예약이 다 찼습니다.");
-      } else {
-        setSelectDays(selectedDate);
-        setConfirmClose(true);
+  function getReservations() {
+    const reservation = localStorage.getItem("reservations");
+    return reservation ? JSON.parse(reservation) : {};
+  }
 
-        const storeDays = JSON.parse(localStorage.getItem("selectDay")) || [];
+  const handleDateClick = (day) => {
+    setSelectedDate(day);
+    setDateOrangeChange(false);
+  };
 
-        const updateDays = [...storeDays, selectedDate];
+  const handleTimeClick = (e) => {
+    const target = e.target.innerText;
+    if (target) {
+      setSelectedTime(target);
+      setOrangeChange(false);
+    }
+  };
 
-        localStorage.setItem("selectDay", JSON.stringify(updateDays));
+  function addReservation(data) {
+    const reservations = getReservations();
 
-        setSelectDates((prevDates) => [...prevDates, selectedDate]);
+    if (!selectedStore || !selectedDate || !selectedTime) {
+      alert("날짜, 시간 모두 선택해야 예약이 가능합니다.");
+      return;
+    }
 
-        setSelectDays(updateDays);
-      }
+    if (!reservations[selectedStore.TITLE]) {
+      reservations[selectedStore.TITLE] = [];
+    }
+
+    const duplicateReservation = reservations[selectedStore.TITLE].some(
+      (reservation) =>
+        reservation.date === selectedDate && reservation.time === selectedTime
+    );
+    if (duplicateReservation) {
+      alert("이미 예약이 있습니다.");
+    } else {
+      setConfirmClose(true);
+    }
+
+    reservations[selectedStore.TITLE].push({
+      date: selectedDate,
+      time: selectedTime,
+    });
+    setOrangeChange(true);
+    setDateOrangeChange(true);
+
+    saveReservation(reservations);
+    function saveReservation() {
+      localStorage.setItem("reservations", JSON.stringify(reservations));
     }
   }
 
@@ -50,7 +86,11 @@ export default function Asidebar({ data, mapData }) {
       currentRow.push(
         <td
           key={`day-${dayCounter}`}
-          className={selectedDate === currentDay ? "orange" : ""}
+          className={
+            selectedDate === currentDay && dateOrangeChange === false
+              ? "orange"
+              : ""
+          }
           onClick={() => handleDateClick(currentDay)}
         >
           {currentDay}
@@ -68,7 +108,11 @@ export default function Asidebar({ data, mapData }) {
         currentRow.push(
           <td
             key={`day-${dayCounter}`}
-            className={selectedDate === currentDay ? "orange" : ""}
+            className={
+              selectedDate === currentDay && dateOrangeChange === false
+                ? "orange"
+                : ""
+            }
             onClick={() => handleDateClick(currentDay)}
           >
             {currentDay}
@@ -85,7 +129,11 @@ export default function Asidebar({ data, mapData }) {
       while (currentRow.length < 7) {
         currentRow.push(
           <td
-            className={selectedDate === dayCounter ? "orange" : ""}
+            className={
+              selectedDate === dayCounter && dateOrangeChange === false
+                ? "orange"
+                : ""
+            }
             onClick={() => handleDateClick(dayCounter)}
             key={`empty-${currentRow.length}`}
           />
@@ -97,10 +145,6 @@ export default function Asidebar({ data, mapData }) {
     return rows;
   };
 
-  const handleDateClick = (day) => {
-    setSelectedDate(day);
-  };
-
   const asideMenu = data.map((item, index) => {
     const toggleColor = () => {
       setChangeColor({ ...changeColor, [index]: !changeColor[index] });
@@ -110,7 +154,8 @@ export default function Asidebar({ data, mapData }) {
       setFavorite({ ...favorite, [index]: !favorite[index] });
     };
 
-    const reservation = (mapData) => {
+    const reservation = (mapData, item) => {
+      setSelectedStore(item);
       setReservationClose(true);
       if (mapData.map && mapData.markers) {
         const markerIndex = data.findIndex((el) => el.TITLE === item.TITLE);
@@ -151,7 +196,10 @@ export default function Asidebar({ data, mapData }) {
         </p>
         <br />
         <div className="iconBox">
-          <button onClick={() => reservation(mapData)} className="bottomBtn">
+          <button
+            onClick={() => reservation(mapData, item)}
+            className="bottomBtn"
+          >
             예약하기
           </button>
           <button
@@ -238,7 +286,125 @@ export default function Asidebar({ data, mapData }) {
             <tbody className="tbody">{calendar()}</tbody>
           </table>
         </div>
-        <div onClick={reservationBtn} className="reservationBtn">
+        <div className="reservationTime">
+          <div className="timeTitle">오전</div>
+          <div className="timeBoxs">
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "11:00" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>11:00</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "11:30" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>11:30</span>
+            </div>
+          </div>
+          <div className="timeTitle">오후</div>
+          <div className="timeBoxs">
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "12:00" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>12:00</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "12:30" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>12:30</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "1:00" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>1:00</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "1:30" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>1:30</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "2:00" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>2:00</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "2:30" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>2:30</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "3:00" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>3:00</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "3:30" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>3:30</span>
+            </div>
+            <div
+              onClick={handleTimeClick}
+              className={
+                selectedTime === "4:00" && orangeChange === false
+                  ? " orangeTimeBox"
+                  : "timeBox"
+              }
+            >
+              <span>4:00</span>
+            </div>
+          </div>
+        </div>
+        <div onClick={addReservation} className="reservationBtn">
           예약
         </div>
       </div>
