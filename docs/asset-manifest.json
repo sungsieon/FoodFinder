@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/FoodFinder/static/css/main.82819acc.css",
-    "main.js": "/FoodFinder/static/js/main.ee1cdaa9.js",
+    "main.css": "/FoodFinder/static/css/main.405e4a64.css",
+    "main.js": "/FoodFinder/static/js/main.5fbbbb84.js",
     "static/js/453.e5b00392.chunk.js": "/FoodFinder/static/js/453.e5b00392.chunk.js",
     "static/media/ChosunKg.TTF": "/FoodFinder/static/media/ChosunKg.5922e50828ed29451f92.TTF",
     "static/media/Puradak Gentle Gothic.ttf": "/FoodFinder/static/media/Puradak Gentle Gothic.f46c6081dddf95730690.ttf",
     "static/media/dish.png": "/FoodFinder/static/media/dish.2f9ef0990b09a7965509.png",
     "index.html": "/FoodFinder/index.html",
-    "main.82819acc.css.map": "/FoodFinder/static/css/main.82819acc.css.map",
-    "main.ee1cdaa9.js.map": "/FoodFinder/static/js/main.ee1cdaa9.js.map",
+    "main.405e4a64.css.map": "/FoodFinder/static/css/main.405e4a64.css.map",
+    "main.5fbbbb84.js.map": "/FoodFinder/static/js/main.5fbbbb84.js.map",
     "453.e5b00392.chunk.js.map": "/FoodFinder/static/js/453.e5b00392.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82819acc.css",
-    "static/js/main.ee1cdaa9.js"
+    "static/css/main.405e4a64.css",
+    "static/js/main.5fbbbb84.js"
   ]
 }
