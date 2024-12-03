@@ -385,6 +385,8 @@
   cursor: pointer;
 }
 
+
+
 .todayFood {
   cursor: pointer;
   font-size: 1.2rem;
@@ -680,9 +682,25 @@ td:hover {
   }
 }
 
+@media (max-width: 766px){
+  .titleBox {
+    width:100%;
+  }
+}
+
 @media (max-width: 768px) {
   .left-login-bg {
     display: none;
+  }
+
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffa500;
+    padding: 10px;
+    z-index: 100;
   }
 
   .username {
