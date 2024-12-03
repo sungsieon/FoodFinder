@@ -1,20 +1,20 @@
 * {
-  margin:0;
-  font-family: 'Puradak Gentle Gothic';
+  margin: 0;
+  font-family: "Puradak Gentle Gothic";
 }
 
 #map {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .navbar {
-  position:relative;
-  display:flex;
+  position: relative;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FFA500;
-  padding:10px;
-  z-index:100;
+  background-color: #ffa500;
+  padding: 10px;
+  z-index: 100;
 }
 
 .disabled {
@@ -23,340 +23,333 @@
 }
 
 .foodIcon2 {
-  width:1.6rem;
+  width: 1.6rem;
 }
 
 .infodiv {
-  color:black;
+  color: orange;
+  background-color: orange;
 }
 
 .title {
-  color:black;
-  font-weight:1000;
+  color: black;
+  font-weight: 1000;
 }
-
 
 .menu {
-  display:flex;
-  color:white;
+  display: flex;
 }
 
-.navbar button{
-background-color: transparent;
-border:none;
-color:white;
+.navbar button {
+  background-color: transparent;
+  border: none;
 }
 
 .aside {
-  position:absolute;
-  top:3rem;
-  left:0;
-  width:19rem;
-  height:900px;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 19rem;
+  height: 900px;
   background-color: white;
-  z-index:30;
-  overflow-y:scroll;
-  border-right:5px solid #FFA500;
+  z-index: 30;
+  overflow-y: scroll;
+  border-right: 5px solid #ffa500;
 }
-
-
 
 .topButton {
-  width:100%;
-  display:flex;
-  text-align: center; 
-  border-bottom: 5px solid #FFA500;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  border-bottom: 5px solid #ffa500;
 }
 
-.allButton{
-  width:50%;
-  height:2rem;
-  display:flex;
+.allButton {
+  width: 50%;
+  height: 2rem;
+  display: flex;
   flex-direction: column;
   justify-content: end;
-  border-right:1px solid rgb(212, 212, 212);
-  padding-bottom:10px;
+  border-right: 1px solid rgb(212, 212, 212);
+  padding-bottom: 10px;
   cursor: pointer;
 }
 
 .starBox {
-  display:flex;
+  display: flex;
 }
 
 .stars {
-  width:1rem;
+  width: 1rem;
 }
 
-.goodButton{
-  width:50%;
-  height:2rem;
-  display:flex;
+.goodButton {
+  width: 50%;
+  height: 2rem;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content:end;
+  justify-content: end;
   cursor: pointer;
-  margin-top:5px;
+  margin-top: 5px;
 }
 
 .storeMenu {
-  position:relative;
-  width:100%;
-  height:20rem;
-  color:black;
-  border-bottom:2px solid #FFA500;
-  padding:5px;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  color: black;
+  border-bottom: 2px solid #ffa500;
+  padding: 5px;
 }
 
 .address {
-  padding-top:10px;
+  padding-top: 10px;
 }
 
-.goodIcon{
-  width:1.5rem;
+.goodIcon {
+  width: 1.5rem;
 }
 
-.iconBox{
-  width:16rem;
-  position:absolute;
-  bottom:15px;
-  display:flex;
-  align-items:end;
+.iconBox {
+  width: 16rem;
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  align-items: end;
 }
 
 .username {
-  font-family: 'ChosunKg';
-  font-size:1.2rem;
+  font-family: "ChosunKg";
+  font-size: 1.2rem;
 }
 
 .bottomBtn2 {
-  margin-left:10px;
+  margin-left: 10px;
 }
 
-.heart{
-  margin-left:80px;
-  width:3rem;
+.heart {
+  margin-left: 80px;
+  width: 3rem;
 }
 
 .heart2 {
-  width:3rem;
+  width: 3rem;
 }
 
-.heartImg{
-  width:3rem;
-  
+.heartImg {
+  width: 3rem;
 }
 
 .iconBox button {
-  width:5rem;
-  height:2rem;
-  border:none;
+  width: 5rem;
+  height: 2rem;
+  border: none;
   border-radius: 8px;
-  color:white;
-  background-color: #FFA500;
+  color: white;
+  background-color: #ffa500;
   cursor: pointer;
 }
 
-
 .search {
-  margin-right:0.5rem;
+  margin-right: 0.5rem;
   cursor: pointer;
 }
 
 .goodIcon {
   cursor: pointer;
-  fill:black;
+  fill: black;
 }
 
-.goodChange{
-  fill:black;
+.goodChange {
+  fill: black;
 }
 
-.iconBox svg{
-  width:1.2rem;
+.iconBox svg {
+  width: 1.2rem;
 }
 
 .login-bg-box {
-  width:100%;
-  height:100vh;
-  display:flex;
+  width: 100%;
+  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
-  
 }
 
-.left-login-bg { 
-  width:37%;
-  height:100%;
+.left-login-bg {
+  width: 37%;
+  height: 100%;
   background-color: hsl(48, 100%, 63%);
-  z-index:1;
-  position:relative;
+  z-index: 1;
+  position: relative;
 }
 
 .spoonImg {
-  position:absolute;
-  top:33%;
-  right:-18%;
-  width:15rem;
+  position: absolute;
+  top: 33%;
+  right: -18%;
+  width: 15rem;
 }
 
-.spoonImg2{
-  position:absolute;
-  top:33%;
-  right:-18%;
-  width:15rem;
+.spoonImg2 {
+  position: absolute;
+  top: 33%;
+  right: -18%;
+  width: 15rem;
 }
 
 .spoon {
-width:100%;
+  width: 100%;
 }
 
 .forkImg {
   position: absolute;
-  top:15%;
-  right:-12%;
-  width:15rem;
+  top: 15%;
+  right: -12%;
+  width: 15rem;
 }
 
-.forkImg2{
+.forkImg2 {
   position: absolute;
-  top:15%;
-  right:-12%;
-  width:15rem;
-  
+  top: 15%;
+  right: -12%;
+  width: 15rem;
 }
 
 .fork {
-  width:100%;
+  width: 100%;
   fill: #ff0000;
 }
 
 .dishBox {
   position: absolute;
-  top:46%;
-  left:-30%;
-  width:25rem;
+  top: 46%;
+  left: -30%;
+  width: 25rem;
 }
 
-.dishBox2{
+.dishBox2 {
   position: absolute;
-  top:46%;
-  left:-30%;
-  width:25rem;
+  top: 46%;
+  left: -30%;
+  width: 25rem;
   animation: move 2s ease-in-out;
 }
 
 .dish {
-  width:100%;
+  width: 100%;
 }
 
 .left_TextBox {
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items:end;
-  height:100%;
-  font-size:11px;
-  font-weight:1000;
-  width:100%;
+  align-items: end;
+  height: 100%;
+  font-size: 11px;
+  font-weight: 1000;
+  width: 100%;
 }
 
-.left_TextBox h3{
-  margin-bottom:20px;
-  z-index:20;
+.left_TextBox h3 {
+  margin-bottom: 20px;
+  z-index: 20;
 }
 
 .login-bg {
-  width:63%;
-  height:100vh;
+  width: 63%;
+  height: 100vh;
   background-color: white;
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items:center;
-  z-index:50;
-  
+  align-items: center;
+  z-index: 50;
 }
 
-.memberBox{
-  display:flex;
-  justify-content:space-between;
+.memberBox {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .container {
-  width:325px;
-  height:17rem;
-  margin:0 auto;
+  width: 325px;
+  height: 17rem;
+  margin: 0 auto;
   background-color: white;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .inputBox {
-  display:flex;
-  
+  display: flex;
+
   flex-direction: column;
-  margin:0 auto;
-  width:325px;
-  
+  margin: 0 auto;
+  width: 325px;
 }
 
 .inputBox input {
-  padding:10px;
-  border-radius:30px;
-  margin-bottom:10px;
-  border:1.7px solid #1B1B1B;;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  border: 1.7px solid #1b1b1b;
 }
 
 .container_title {
   text-align: center;
-  padding:17px;
+  padding: 17px;
 }
 
 .memberText2 {
   text-align: center;
-  color:orange;
-  font-size:0.7rem;
-  font-weight:1000;
-  border:none;
-  background-color:transparent;
+  color: orange;
+  font-size: 0.7rem;
+  font-weight: 1000;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .memberText {
   text-align: center;
-  font-weight:1000;
+  font-weight: 1000;
   cursor: pointer;
 }
 
 .loginBtn {
-  padding:5px;
-  width:6rem;
-  color:white;
-  border:none;
-  border-radius:8px;
-  background-color:orange;
+  padding: 5px;
+  width: 6rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  background-color: orange;
   cursor: pointer;
 }
 
 .foodIcon {
-  width:2.5rem;
+  width: 2.5rem;
   text-align: center;
 }
 
 .signup_bg {
-  width:63%;
-  height:100vh;
+  width: 63%;
+  height: 100vh;
   background-color: white;
-  z-index:50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
 }
 
 .container2 {
-  width:25rem;
-  height:25rem;
-  margin:9rem auto;
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto;
   background-color: white;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -381,112 +374,120 @@ width:100%;
   animation: move 2s ease-in-out forwards;
 }
 
-.loginBtn2{
-  padding:10px;
-  width:10rem;
-  color:white;
-  border:none;
-  border-radius:20px;
-  margin:0 auto;
-  background-color:orange;
+.loginBtn2 {
+  padding: 10px;
+  width: 10rem;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin: 0 auto;
+  background-color: orange;
   cursor: pointer;
 }
 
 .todayFood {
-  cursor:pointer;
-  font-size:1.2rem;
-  opacity:0.6;
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  color: white;
 }
 
 .todayFood:hover {
-  opacity:1;
+  opacity: 1;
 }
 
-.home {
-  cursor:pointer;
-  font-size:1.2rem;
-}
-
-.randomFood {
-  position:absolute;
-  top:10%;
-  left:20%;
-  width:60rem;
-  height:45rem;
-  background-color: hsl(48, 100%, 63%);
-  z-index:100;
+.list {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
   display:none;
 }
 
-.show{
-  display:block;
-  position:absolute;
-  top:10%;
-  left:20%;
-  width:60rem;
-  height:45rem;
+.home {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.randomFood {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 60rem;
+  height: 45rem;
   background-color: hsl(48, 100%, 63%);
-  z-index:100;
+  z-index: 100;
+  display: none;
+}
+
+.show {
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 60rem;
+  height: 45rem;
+  background-color: hsl(48, 100%, 63%);
+  z-index: 100;
 }
 
 .closeBtn {
-  display:flex;
+  display: flex;
   justify-content: end;
-  font-size:2rem;
-  padding:1rem;
-  cursor:pointer;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .foodBox {
-  display:flex;
+  display: flex;
   flex-direction: column;
   text-align: center;
-  height:35rem;
-  margin-top:1rem;
+  height: 35rem;
+  margin-top: 1rem;
 }
 
-.foodBox p{
-  margin-top:2rem;
-  font-size:1.2rem;
+.foodBox p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
 
 .randomFoodImg {
-  display:flex;
-  margin:0 auto;
-  width:18rem; 
+  display: flex;
+  margin: 0 auto;
+  width: 18rem;
 }
 
 .FoodImg {
-  font-size:3rem;
-  
+  font-size: 3rem;
 }
 
 .reservation {
-  position:absolute;
-  top:4rem;
-  left:20.2rem;
-  background-color:white;
-  width:20rem;
-  height:48rem;
-  z-index:120;
-  border-radius:20px;
+  position: absolute;
+  top: 4rem;
+  left: 20.2rem;
+  background-color: white;
+  width: 20rem;
+  height: 48rem;
+  z-index: 120;
+  border-radius: 20px;
 }
 
 .monthTop {
-  display:flex;
+  display: flex;
   justify-content: end;
-  padding:1rem;
+  padding: 1rem;
 }
 
 .monthTop span {
-  margin-right:0.3rem;
-  cursor:pointer;
+  margin-right: 0.3rem;
+  cursor: pointer;
 }
 
 .month {
-  display:flex;
+  display: flex;
   justify-content: center;
-  margin-right:5.4rem;
+  margin-right: 5.4rem;
 }
 
 .thead {
@@ -494,15 +495,14 @@ width:100%;
 }
 
 .calendar1 {
-  width:15rem;
-  height:22rem;
-  margin:0 auto;
+  width: 15rem;
+  height: 22rem;
+  margin: 0 auto;
 }
 
-.calendar th{
-  padding:0.4rem;
-  font-size:15px;
- 
+.calendar th {
+  padding: 0.4rem;
+  font-size: 15px;
 }
 
 .tbody {
@@ -515,105 +515,121 @@ width:100%;
 }
 
 .gray {
-  color:gray;
+  color: gray;
 }
 
-td:hover{
-  background-color: #FFA500;
-  
+td:hover {
+  background-color: #ffa500;
+
   cursor: pointer;
 }
 
 .Arial {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .reservationBtn {
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width:5rem;
-  height:2rem;
-  padding:5px;
-  background-color:orange;
-  margin-left:12rem;
-  margin-top:3rem;
-  cursor:pointer;
-  border-radius:22px;
+  width: 5rem;
+  height: 2rem;
+  padding: 5px;
+  background-color: orange;
+  margin-left: 12rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  border-radius: 22px;
 }
 
 .hidden {
-  display:none;
+  display: none;
 }
 
 .reservationConfirm {
-  position:absolute;
-  top:40%;
-  left:45%;
-  z-index:200;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  z-index: 200;
   width: 20rem;
-  height:7rem;
-  padding:0.5rem;
+  height: 7rem;
+  padding: 0.5rem;
   background-color: white;
-  border:7px solid orange;
+  border: 7px solid orange;
 }
 
 .confirmClose {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .confirmTop {
-  display:flex;
+  display: flex;
   justify-content: space-between;
 }
 
-.ChImg{
-  color:#FFA500;
+.ChImg {
+  color: #ffa500;
 }
 
 .check {
-  display:flex;
+  display: flex;
   justify-content: center;
-  margin-top:1.5rem;
+  margin-top: 1.5rem;
 }
-.reservationTime{
-   width:17rem;
-   margin-left:2rem;
+.reservationTime {
+  width: 17rem;
+  margin-left: 2rem;
 }
 
-.timeTitle{
-  margin-top:1rem;
+.timeTitle {
+  margin-top: 1rem;
 }
 
 .timeBoxs {
-  display:grid;
-  grid-template-columns: repeat(3, minmax(10px,1fr));
-  gap:0.7rem;
-  margin-top:0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.7rem;
 }
 
 .timeBox {
-  border:1px solid rgb(202, 202, 202);
-  border-radius:5px;
-  padding:0.5rem;
-  font-size:0.8rem;
-  width:3rem;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  width: 3rem;
   cursor: pointer;
 }
 
 .orangeTimeBox {
-  border:1px solid rgb(202, 202, 202);
-  border-radius:5px;
-  padding:0.5rem;
-  font-size:0.8rem;
-  width:3rem;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  width: 3rem;
   cursor: pointer;
-  background-color:orange;
+  background-color: orange;
 }
 
 .timeBox span {
-  display:flex;
+  display: flex;
   justify-content: center;
+}
+
+.opacityList {
+  opacity: 1;
+}
+
+.aside2 {
+  position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 19rem;
+    height: 900px;
+    background-color: white;
+    z-index: 30;
+    overflow-y: scroll;
+    border-right: 5px solid #ffa500;
 }
 @keyframes movespoon {
   from {
@@ -651,8 +667,7 @@ td:hover{
   }
 }
 
-
-@keyframes move{
+@keyframes move {
   0% {
     transform: translateX(0px);
   }
@@ -665,9 +680,70 @@ td:hover{
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .left-login-bg {
-    display:none;
-  } 
-}
+    display: none;
+  }
 
+  .username {
+    font-size: 1rem;
+    display: none;
+  }
+
+  .title {
+    margin-right: 10rem;
+  }
+
+  .list {
+    opacity: 0.6;
+    display: block;
+  }
+
+  .opacityList {
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .todayFood {
+    display: none;
+  }
+
+  .reservation {
+    position: absolute;
+    top: 4rem;
+    left: 3.5rem;
+    background-color: white;
+    width: 20rem;
+    height: 48rem;
+    z-index: 120;
+    border: 2px solid orange;
+    border-radius: 20px;
+  }
+
+  .reservationConfirm {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 200;
+    width: 20rem;
+    height: 7rem;
+    padding: 0.5rem;
+    background-color: white;
+    border: 7px solid orange;
+  }
+
+  .aside {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 19rem;
+    height: 900px;
+    background-color: white;
+    z-index: 30;
+    overflow-y: scroll;
+    border-right: 5px solid #ffa500;
+    display:none;
+  }
+}

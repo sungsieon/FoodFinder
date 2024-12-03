@@ -9,8 +9,9 @@ export default function KakaoMap() {
   const [randomBtn, setRandomBtn] = useState(false);
   const [randomN, setRandomN] = useState(null);
   const [mapData, setMapData] = useState(null);
+  const [clickList,setClickList] = useState(true)
 
-  const username = localStorage.getItem("userData");
+ 
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userData"));
@@ -57,8 +58,12 @@ export default function KakaoMap() {
         });
 
         var infowindow = new kakao.maps.InfoWindow({
-          content: `<div className="infodiv" style="padding:5px;">
-    ${el.TITLE}
+          content: `<div className="infodiv" style="padding:5px; border:3px solid orange;">
+    ${el.TITLE}<br><br>
+    주소 : ${el.ADDR1}<br>
+    운영 시간 : ${el.USAGE_DAY_WEEK_AND_TIME}<br>
+    메뉴 : ${el.TITLE}<br>
+    
     </div>`,
           removable: true,
         });
@@ -88,6 +93,10 @@ export default function KakaoMap() {
     setRandomBtn(false);
   }
 
+  function ToggleList(){
+    setClickList(!clickList)
+  }
+
   return (
     <>
       <navbar className="navbar">
@@ -110,6 +119,7 @@ export default function KakaoMap() {
           <button onClick={todayBtn} className="todayFood">
             오늘 뭐 먹을까?
           </button>
+          <button onClick={ToggleList} className={clickList ? "list" : "opacityList"}>List</button>
           <button className="home">Home</button>
         </div>
       </navbar>
@@ -464,7 +474,7 @@ export default function KakaoMap() {
           <p>데이터를 찾을 수 없습니다.</p>
         )}
       </div>
-      <Asidebar data={data} mapData={mapData} />
+      <Asidebar data={data} mapData={mapData} toggleList={clickList}/>
     </>
   );
 }

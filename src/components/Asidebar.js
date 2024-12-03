@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Asidebar({ data, mapData }) {
+export default function Asidebar({ data, mapData, toggleList }) {
   const [changeColor, setChangeColor] = useState({});
   const [favorite, setFavorite] = useState({});
   const [showFavorites, setShowFavorites] = useState(false);
@@ -8,12 +8,11 @@ export default function Asidebar({ data, mapData }) {
   const [selectedDate, setSelectedDate] = useState(null);
   const [reservationClose, setReservationClose] = useState(false);
   const [confirmClose, setConfirmClose] = useState(false);
-  const [selectDays, setSelectDays] = useState([]);
-  const [selectDates, setSelectDates] = useState([]);
   const [selectedTime, setSelectedTime] = useState(null);
   const [orangeChange, setOrangeChange] = useState(false);
   const [dateOrangeChange, setDateOrangeChange] = useState(false);
   const [selectedStore, setSelectedStore] = useState(null);
+  
 
   function getReservations() {
     const reservation = localStorage.getItem("reservations");
@@ -238,7 +237,7 @@ export default function Asidebar({ data, mapData }) {
 
   return (
     <>
-      <div className="aside">
+      <div className={toggleList ? "aside" : "aside2"}>
         <div className="topButton">
           <div onClick={() => setShowFavorites(false)} className="allButton">
             전체
