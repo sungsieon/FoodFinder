@@ -123,7 +123,7 @@ export default function KakaoMap() {
           <button className="home">Home</button>
         </div>
       </navbar>
-      <div id="map" style={{ width: "100%", height: "900px" }}></div>
+      <div id="map" style={{ width: "100%", height: "100%" }}></div>
       <div className={randomBtn ? "show" : "randomFood"}>
         <span onClick={closeBtn} className="closeBtn">
           닫기
