@@ -52,7 +52,7 @@ html, body {
 }
 
 .navbar button {
-  background-color: transparent;
+ 
   border: none;
 }
 
@@ -77,7 +77,7 @@ html, body {
   text-align: center;
   border-right:4.5px solid #ffa500;
   border-bottom: 5px solid #ffa500;
-  z-index:999;
+  z-index:9999;
 }
 
 .allButton {
