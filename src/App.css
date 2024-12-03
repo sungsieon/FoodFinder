@@ -57,7 +57,7 @@ html, body {
 
 .aside {
   position: absolute;
-  top: 3rem;
+  top:6rem;
   left: 0;
   width: 19rem;
   height:100%;
@@ -68,9 +68,13 @@ html, body {
 }
 
 .topButton {
-  width: 100%;
+  position:fixed;
+  top:3.2rem;
+  background-color: white;
+  width: 305px;
   display: flex;
   text-align: center;
+  border-right:4.5px solid #ffa500;
   border-bottom: 5px solid #ffa500;
 }
 
@@ -633,10 +637,10 @@ td:hover {
 
 .aside2 {
   position: absolute;
-  top: 3rem;
+  top:6rem;
   left: 0;
   width: 19rem;
-  height: 900px;
+  height:100%;
   background-color: white;
   z-index: 30;
   overflow-y: scroll;
@@ -761,15 +765,15 @@ td:hover {
   }
 
   .aside {
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    width: 19rem;
-    height: 900px;
-    background-color: white;
-    z-index: 30;
-    overflow-y: scroll;
-    border-right: 5px solid #ffa500;
+  position: absolute;
+  top:6rem;
+  left: 0;
+  width: 19rem;
+  height:100%;
+  background-color: white;
+  z-index: 30;
+  overflow-y: scroll;
+  border-right: 5px solid #ffa500;
     display: none;
   }
 }

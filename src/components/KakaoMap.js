@@ -123,7 +123,9 @@ export default function KakaoMap() {
           <button className="home">Home</button>
         </div>
       </navbar>
+      
       <div id="map" style={{ width: "100%", height: "100%" }}></div>
+      <Asidebar data={data} mapData={mapData} toggleList={clickList}/>
       <div className={randomBtn ? "show" : "randomFood"}>
         <span onClick={closeBtn} className="closeBtn">
           닫기
@@ -474,7 +476,7 @@ export default function KakaoMap() {
           <p>데이터를 찾을 수 없습니다.</p>
         )}
       </div>
-      <Asidebar data={data} mapData={mapData} toggleList={clickList}/>
+     {/* <Asidebar data={data} mapData={mapData} toggleList={clickList}/> */}
     </>
   );
 }
