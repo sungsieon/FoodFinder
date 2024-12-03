@@ -76,6 +76,7 @@ html, body {
   text-align: center;
   border-right:4.5px solid #ffa500;
   border-bottom: 5px solid #ffa500;
+  z-index:150;
 }
 
 .allButton {
@@ -114,7 +115,7 @@ html, body {
   height: 20rem;
   color: black;
   border-bottom: 2px solid #ffa500;
-  padding: 5px;
+  margin: 5px;
 }
 
 .address {
