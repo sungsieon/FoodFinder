@@ -1,5 +1,5 @@
 import Asidebar from "./Asidebar";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 
 const { kakao } = window;
 
@@ -10,8 +10,42 @@ export default function KakaoMap() {
   const [randomN, setRandomN] = useState(null);
   const [mapData, setMapData] = useState(null);
   const [clickList,setClickList] = useState(true)
+  const [searchInput,setSearchInput] = useState("")
 
  
+  function handleInput(e){
+      setSearchInput(e.target.value)
+  }
+
+  const divRef = useRef({});
+
+  const inputCunnection = () => {
+      const targetDiv = divRef.current[searchInput]
+      
+      if(targetDiv){
+        targetDiv.scrollIntoView({behavior:'smooth', block:'center'});
+        if (mapData.map && mapData.markers) {
+          const markerIndex = data.findIndex((el) => el.TITLE === searchInput);
+          const marker = mapData.markers[markerIndex];
+  
+          if (marker) {
+            const markerPosition = marker.getPosition();
+            mapData.map.panTo(markerPosition);
+          }
+        }
+
+      }else{
+        console.log("일치하는 항목이 없습니다.")
+      }
+  }
+
+  const keyEnter = (e) => {
+    if(e.key === 'Enter'){
+       inputCunnection()
+    }
+   }
+
+  
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("userData"));
@@ -125,7 +159,16 @@ export default function KakaoMap() {
       </navbar>
       
       <div id="map" style={{ width: "100%", height: "100%" }}></div>
-      <Asidebar data={data} mapData={mapData} toggleList={clickList}/>
+      <Asidebar data={data} mapData={mapData} toggleList={clickList} divRef={divRef}/>
+      <div className="searchBox">
+      <input
+      className="search"
+      placeholder="맛집 이름 검색"
+      onChange={handleInput}
+      onKeyDown={keyEnter}
+      />
+      <svg style={{cursor:"pointer"}} onClick={inputCunnection} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>   
+      </div>
       <div className={randomBtn ? "show" : "randomFood"}>
         <span onClick={closeBtn} className="closeBtn">
           닫기

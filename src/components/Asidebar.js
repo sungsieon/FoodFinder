@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 
-export default function Asidebar({ data, mapData, toggleList }) {
+export default function Asidebar({ data, mapData, toggleList, divRef }) {
   const [changeColor, setChangeColor] = useState({});
   const [favorite, setFavorite] = useState({});
   const [showFavorites, setShowFavorites] = useState(false);
@@ -13,6 +13,7 @@ export default function Asidebar({ data, mapData, toggleList }) {
   const [dateOrangeChange, setDateOrangeChange] = useState(false);
   const [selectedStore, setSelectedStore] = useState(null);
   
+ 
 
   function getReservations() {
     const reservation = localStorage.getItem("reservations");
@@ -171,6 +172,7 @@ export default function Asidebar({ data, mapData, toggleList }) {
       <div
         onClick={toggleColor}
         className={changeColor[index] ? "storeMenu active" : "storeMenu"}
+        ref = {(el) => (divRef.current[item.TITLE] = el)}
         key={index}
       >
         <h4>{item.TITLE}</h4>
