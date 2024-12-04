@@ -860,6 +860,7 @@ td:hover {
     text-align: center;
     border-radius: 0;
     z-index: 20;
+    font-size:18px;
     border: none;
     border-right: 5px solid orange;
     outline: none;
@@ -876,6 +877,7 @@ td:hover {
     text-align: center;
     border-radius: 0;
     z-index: 20;
+    font-size:18px;
     border: none;
     border-right: 5px solid orange;
     outline: none;
