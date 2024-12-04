@@ -58,7 +58,7 @@ export default function KakaoMap() {
         });
 
         var infowindow = new kakao.maps.InfoWindow({
-          content: `<div className="infodiv" style="padding:5px; border:3px solid orange;">
+          content: `<div className="infodiv" style="padding:5px; border:3px solid orange; background-color: white;">
     ${el.TITLE}<br><br>
     주소 : ${el.ADDR1}<br>
     운영 시간 : ${el.USAGE_DAY_WEEK_AND_TIME}<br>
