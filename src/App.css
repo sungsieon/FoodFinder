@@ -1,6 +1,7 @@
 * {
   margin: 0;
   font-family: "Puradak Gentle Gothic";
+  box-sizing: border-box;
 }
 
 html, body {
@@ -58,7 +59,6 @@ html, body {
 
 .aside {
   position: absolute;
-  top:6rem;
   left: 0;
   width: 19rem;
   height:100%;
@@ -75,7 +75,6 @@ html, body {
   width: 305px;
   display: flex;
   text-align: center;
-  border-right:4.5px solid #ffa500;
   border-bottom: 5px solid #ffa500;
   z-index:9999;
   transform: translateZ(1px);
@@ -86,9 +85,10 @@ html, body {
   height: 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: end;
   border-right: 1px solid rgb(212, 212, 212);
-  padding-bottom: 10px;
+  padding-bottom:3px;
   cursor: pointer;
 }
 
@@ -108,7 +108,7 @@ html, body {
   flex-direction: column;
   justify-content: end;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .storeMenu {
