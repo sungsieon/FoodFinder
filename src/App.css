@@ -69,8 +69,8 @@ html, body {
 }
 
 .topButton {
-  position:fixed;
-  top:3.2rem;
+  position: sticky;
+  top:0;
   background-color: white;
   width: 305px;
   display: flex;
@@ -640,7 +640,7 @@ td:hover {
 
 .aside2 {
   position: absolute;
-  top:6rem;
+  top:3rem;
   left: 0;
   width: 19rem;
   height:100%;
