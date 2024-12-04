@@ -814,7 +814,7 @@ td:hover {
     overflow: scroll;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   .reservation {
     position: absolute;
     top: 4rem;
