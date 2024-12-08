@@ -11,6 +11,7 @@ export default function KakaoMap() {
   const [mapData, setMapData] = useState(null);
   const [clickList,setClickList] = useState(true)
   const [searchInput,setSearchInput] = useState("")
+  const [buttonText,setButtonText] = useState("Home");
 
  
   function handleInput(e){
@@ -51,6 +52,20 @@ export default function KakaoMap() {
     const userData = JSON.parse(localStorage.getItem("userData"));
 
     setName(userData.name);
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 748) {
+        setButtonText('Recommend');
+      } else {
+        setButtonText('Home');
+      }
+    };
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize);
   });
 
   useEffect(() => {
@@ -153,7 +168,7 @@ export default function KakaoMap() {
             오늘 뭐 먹을까?
           </button>
           <button onClick={ToggleList} className={clickList ? "list" : "opacityList"}>List</button>
-          <button className="home">Home</button>
+          <button onClick={buttonText == "Recommend" ? todayBtn : () => {}} className="home">{buttonText}</button>
         </div>
       </navbar>
       
@@ -169,15 +184,17 @@ export default function KakaoMap() {
       <svg className={clickList ? "searchBoxSvg" : "searchBoxSvg2"} style={{cursor:"pointer"}} onClick={inputCunnection} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>   
       </div>
       <div className={randomBtn ? "show" : "randomFood"}>
-        <span onClick={closeBtn} className="closeBtn">
-          닫기
-        </span>
+        
         {randomN && data[randomN] ? (
           <div className="foodBox">
+            <span onClick={closeBtn} className="closeBtn">
+          x
+        </span>
             <p>
               <span className="FoodImg">{data[randomN].TITLE}</span>은
               어떠신가요?
             </p>
+            <div className="foodImgBox">
             <svg
               className="randomFoodImg"
               xmlns="http://www.w3.org/2000/svg"
@@ -510,10 +527,14 @@ export default function KakaoMap() {
                 />
               </g>
             </svg>
+            </div>
+            <div className="foodNameBox">
             <p className="foodName">{data[randomN].MAIN_TITLE}</p>
             <p>주소 : {data[randomN].ADDR1}</p>
             <p>운영시간 : {data[randomN].USAGE_DAY_WEEK_AND_TIME}</p>
           </div>
+          </div>
+
         ) : (
           <p>데이터를 찾을 수 없습니다.</p>
         )}
