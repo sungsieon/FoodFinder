@@ -5,7 +5,7 @@
 # 기술 스택<br>
 <img alt="SASS" src ="https://img.shields.io/badge/HTML5-E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=white"/>  <img alt="SASS" src ="https://img.shields.io/badge/CSS3-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white"/>  <img alt="SASS" src ="https://img.shields.io/badge/Javascript-F7DF1E.svg?&style=for-the-badge&logo=Javascript&logoColor=white"/>  <img alt="SASS" src ="https://img.shields.io/badge/React-61DAFB.svg?&style=for-the-badge&logo=React&logoColor=white"/><br><br>
 
-# 특성<br>
+# 기능<br>
 - 로그인 기능
 - 부산 지역 내 맛집 검색 기능
 - 검색 시 카카오지도API 이용하여 해당 위치로 이동 
